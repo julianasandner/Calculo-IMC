@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="titulo">Cálculo do IMC</h1>
+    </header>
+
+    <main>
+
+        <section class="banner">
+            <img class="banner__imagem" src="./vecteezy_fresh-orange-citrus-fruit_16927338.jpg">
+            <form action="" class="caixinhas" id="form-adiciona">
+                    <label class="caixinha-nome" for="pesquisar-nome">
+                        <input class="menu__input" type="text" name="input" placeholder="Digite seu nome:" id="pesquisar-nome">
+                    </label>   
+                    <label class="caixinha-peso" for="pesquisar-peso">
+                        <input class="menu__input" type="number" name="input" placeholder="Qual é o seu peso atual?" id="pesquisar-peso">
+                    </label>  
+                    <label class="caixinha-altura" for="pesquisar-altura">
+                        <input class="menu__input" type="number" name="input" placeholder="Qual é a sua altura?" id="pesquisar-altura">
+                    </label>
+                
+                <button class="botao" id="botao-calcular" type="submit">Calcular</button>
+            </form>
+        </section>
+
+        <section class="resultado">
+            <div>         
+                <p class="frase-resultado" id="mostrarResultado"></p>
+            </div>
+            <a href="https://wa.me/5547999009399">
+                <button class="botao-whats"> Clique aqui e tire todas as suas dúvidas!</button>
+            </a>
+        </section>
+
+        
+    </main>
+
+    <footer class="rodape">Copyright 2023</footer>
+
+    <script src="./calculandoIMC.js"></script>
+    
+</body>
+</html>
