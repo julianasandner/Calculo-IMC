@@ -12,12 +12,17 @@ recolherInfos.addEventListener('click', function(event) {
 
     var alturaInput = document.querySelector('#pesquisar-altura');
     var altura = alturaInput.value;
+    
+    if (!altura || !peso || !texto) {
+        alert('preencha todos os campos');
+        return false;
+    }   
 
     var resultado = calculaImc(peso, altura);
 
     var element = document.querySelector('#mostrarResultado');
-    var text = document.createTextNode(texto + " o seu IMC é " + resultado + " !");
-    element.appendChild(text);
+    var text = texto + " o seu IMC é " + resultado + " !";
+    element.innerHTML = text;
    
     var form = document.querySelector('#form-adiciona');
     form.reset();
