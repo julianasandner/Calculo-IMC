@@ -6,19 +6,24 @@ recolherInfos.addEventListener('click', function(event) {
 
     var nome = document.querySelector('#pesquisar-nome');
     var texto = nome.value;
-    
+
     var pesoInput = document.querySelector('#pesquisar-peso');
     var peso = pesoInput.value;
 
     var alturaInput = document.querySelector('#pesquisar-altura');
     var altura = alturaInput.value;
 
+    if (!altura || !peso || !texto) {
+        alert('preencha todos os campos');
+        return false;
+    }
+
     var resultado = calculaImc(peso, altura);
 
     var element = document.querySelector('#mostrarResultado');
-    var text = document.createTextNode(texto + " o seu IMC é " + resultado + " !");
-    element.appendChild(text);
-   
+    var text = texto + " o seu IMC é " + resultado + " !";
+    element.innerHTML = text;
+
     var form = document.querySelector('#form-adiciona');
     form.reset();
 
@@ -32,6 +37,3 @@ function calculaImc(peso, altura) {
     imc = peso / (altura * altura);
     return imc.toFixed(2);
 }
-
-
-
